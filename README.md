@@ -1,4 +1,35 @@
-# AVIV QA Web Technical Test
+# 🏗️ AVIV QA Web Technical Test
+
+This repository contains the Aviv QA Web Technical Test.
+
+--- 
+
+## 🔧 Installation
+
+To install the project dependencies, run:
+
+```bash
+poetry install --all-poetry
+```
+
+---
+
+## Usage
+
+To run all tests, run:
+
+```bash
+poetry run pytest
+```
+
+To run the tests locally and in a docker container, run:
+
+```bash
+docker build -t aviv-web-technical-test .
+docker run --rm -it aviv-web-technical-test /bin/bash -c "poetry run pytest"
+```
+
+NB: Make sure Docker is installed and running on your machine.
 
 ## Overview
 

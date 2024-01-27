@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "AvivWebTechnicalTest"
+version = "0.1.0"
+description = "A technical challenge for QA Engineer position at Aviv"
+authors = [
+    "Noah Afolabi <mcnoah2012@gmail.com>"
+]
+
+readme = "README.md"
+packages = [
+    { include = "tests", from = "." },
+]
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^7.4"
+selenium = "^4.0"
+webdriver-manager = "^4.0"
+structlog = "^24.1"
+Faker = "^18.4"
+pre-commit = "^3.6"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--log-level=INFO",
+    "--log-cli-level=INFO",
+    "--capture=no",
+]
+
+[tool.ruff]
+line-length = 88
+
+select = [
+    "E",
+    "F",
+    "Q",
+    "I",
+]
+
+# Don't enfore line lenght violations
+ignore = [
+    "E501",
+]
+
+[tool.black]
+line-length = 88
