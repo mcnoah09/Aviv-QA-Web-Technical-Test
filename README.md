@@ -31,6 +31,24 @@ docker run --rm -it aviv-web-technical-test /bin/bash -c "poetry run pytest"
 
 NB: Make sure Docker is installed and running on your machine.
 
+---
+
+## Future Improvements
+- [ ] Add a feature to allow users to specify the browser they want to use.
+- [ ] Add a static code analysis job to the CI pipeline.
+- [ ] Implement parallel execution of tests using pytest-xdist load scheduling which could potentially reduce the execution time of the test suite by 20% or more.
+- [ ] Add a feature to allow users to tag or mark tests and execute them based on the tags or markers.
+- [ ] Implement a retry mechanism for failed tests to reduce flakiness.
+
+## Challenges and Solutions
+- **Challenge**: The test suite was not easy to maintain
+  - **Solution**: I implemented a Page Object Model design pattern to make the test suite more maintainable. This allowed me to reduce the time it takes to add new tests.
+- **Challenge**: The test suite was not easy to debug
+  - **Solution**: I implemented a logging mechanism to make the test suite more debuggable. This allowed me to reduce the time it takes to debug a test failure.
+- **Challenge**: The test suite was not easy to integrate with other tools
+  - **Solution**: I implemented a Dockerfile to make the test suite more integratable. This allowed me to reduce the time it takes to integrate the test suite with other tools.
+
+---
 ## Overview
 
 Welcome to the Aviv QA Web Technical Test! This challenge involves automating test scenarios for the [demo.nopcommerce.com](https://demo.nopcommerce.com/) website using your preferred programming language (TypeScript, JavaScript, Java, Python, or .NET) and your preferred test automation framework or library (Playwright, WebdriverIO, Cypress, TestCafe, or Selenium Webdriver). 
