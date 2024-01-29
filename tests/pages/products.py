@@ -49,9 +49,7 @@ class ProductsCategoryPage:
         self.wait.until(EC.element_to_be_clickable(self.add_to_cart_button)).click()
 
     def get_product_name(self):
-        return self.wait.until(
-            EC.visibility_of_element_located(self.product_name)
-        ).text
+        return self.wait.until(EC.visibility_of_element_located(self.product_name)).text
 
 
 class DigitalDownloadsProductCategoryPage(ProductsCategoryPage):
