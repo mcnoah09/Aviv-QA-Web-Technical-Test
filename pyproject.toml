@@ -30,8 +30,7 @@ addopts = [
     "--log-level=INFO",
     "--log-cli-level=INFO",
     "--capture=no",
-    "--alluredir", "allure-reports",
-    ""
+    "--alluredir", "allure-results",
 ]
 
 [tool.ruff]
