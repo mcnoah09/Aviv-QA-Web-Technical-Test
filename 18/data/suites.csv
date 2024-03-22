@@ -1,0 +1,135 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Mar 22 15:32:07 GMT 2024","Fri Mar 22 15:32:11 GMT 2024","4583","tests","test_cart_functionality","","","","test_cart_functionality","
+    Test cart functionality
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param fake: Faker instance
+    :param auth: Tuple of email and password of an existing user
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:32:54 GMT 2024","Fri Mar 22 15:33:00 GMT 2024","5617","tests","test_invalid_signup","","","","test_invalid_signup[Brian-Larson-brianlarson4@example.net-password-password1-Passwords do not match-The password and confirmation password do not match.]","
+    Test invalid user signup
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param first_name: First name
+    :param last_name: Last name
+    :param email: Email
+    :param password: Password
+    :param confirm_password: Confirm password
+    :param description: Test description
+    :param expected_error_message: Expected error message
+
+    :return: None
+    "
+"broken","Fri Mar 22 15:32:13 GMT 2024","Fri Mar 22 15:32:19 GMT 2024","5569","tests","test_existing_user_login_and_checkout","","","","test_existing_user_login_and_checkout","
+    Test existing user login and checkout
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param fake: Faker instance
+    :param auth: Tuple of email and password of an existing user
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:33:00 GMT 2024","Fri Mar 22 15:33:11 GMT 2024","10949","tests","test_user_signup_and_checkout","","","","test_user_signup_and_checkout","
+    Test user signup and checkout
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param fake: Faker instance
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:32:19 GMT 2024","Fri Mar 22 15:32:26 GMT 2024","6079","tests","test_invalid_signup","","","","test_invalid_signup[-Larson-brian@example.net-password-password-First name field is empty-First name is required.]","
+    Test invalid user signup
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param first_name: First name
+    :param last_name: Last name
+    :param email: Email
+    :param password: Password
+    :param confirm_password: Confirm password
+    :param description: Test description
+    :param expected_error_message: Expected error message
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:32:43 GMT 2024","Fri Mar 22 15:32:48 GMT 2024","5748","tests","test_invalid_signup","","","","test_invalid_signup[Brian-Larson-brianlarson2@example.net-password--Confirm password field is empty-Password is required.]","
+    Test invalid user signup
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param first_name: First name
+    :param last_name: Last name
+    :param email: Email
+    :param password: Password
+    :param confirm_password: Confirm password
+    :param description: Test description
+    :param expected_error_message: Expected error message
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:32:31 GMT 2024","Fri Mar 22 15:32:37 GMT 2024","5747","tests","test_invalid_signup","","","","test_invalid_signup[Brian-Larson-brian_larson.net-password-password-Invalid email-Wrong email]","
+    Test invalid user signup
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param first_name: First name
+    :param last_name: Last name
+    :param email: Email
+    :param password: Password
+    :param confirm_password: Confirm password
+    :param description: Test description
+    :param expected_error_message: Expected error message
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:32:37 GMT 2024","Fri Mar 22 15:32:43 GMT 2024","5769","tests","test_invalid_signup","","","","test_invalid_signup[Brian-Larson-brianlarson1@example.net---Password field is empty-Password is required.]","
+    Test invalid user signup
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param first_name: First name
+    :param last_name: Last name
+    :param email: Email
+    :param password: Password
+    :param confirm_password: Confirm password
+    :param description: Test description
+    :param expected_error_message: Expected error message
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:32:48 GMT 2024","Fri Mar 22 15:32:54 GMT 2024","5615","tests","test_invalid_signup","","","","test_invalid_signup[Brian-Larson-brianlarson3@example.net-pass-password-Password is less than 6 characters-Password must meet the following rules]","
+    Test invalid user signup
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param first_name: First name
+    :param last_name: Last name
+    :param email: Email
+    :param password: Password
+    :param confirm_password: Confirm password
+    :param description: Test description
+    :param expected_error_message: Expected error message
+
+    :return: None
+    "
+"passed","Fri Mar 22 15:32:26 GMT 2024","Fri Mar 22 15:32:31 GMT 2024","5630","tests","test_invalid_signup","","","","test_invalid_signup[Brian--larson@example.net-password-password-Last name field is empty-Last name is required.]","
+    Test invalid user signup
+
+    :param driver: WebDriver instance
+    :param wait: WebDriverWait instance
+    :param first_name: First name
+    :param last_name: Last name
+    :param email: Email
+    :param password: Password
+    :param confirm_password: Confirm password
+    :param description: Test description
+    :param expected_error_message: Expected error message
+
+    :return: None
+    "
