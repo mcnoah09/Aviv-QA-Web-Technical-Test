@@ -17,19 +17,20 @@ priority = "primary"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pytest = "^7.4"
+pytest = "^8.1"
 selenium = "^4.0"
 webdriver-manager = "^4.0"
 structlog = "^24.1"
 Faker = "^18.4"
 pre-commit = "^3.6"
-pytest-html = "^4.1.1"
+allure-pytest = "^2.13"
 
 [tool.pytest.ini_options]
 addopts = [
     "--log-level=INFO",
     "--log-cli-level=INFO",
     "--capture=no",
+    "--alluredir", "allure-results",
 ]
 
 [tool.ruff]

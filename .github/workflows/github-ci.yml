@@ -31,14 +31,29 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - name: Run Tests and Generate Report
-        run: poetry run pytest -v --html=reports/test_report.html tests/
+      - name: Run Tests
+        run: poetry run pytest -v
 
-      - name: Upload Test Report and Screenshots
-        uses: actions/upload-artifact@v2
+      - name: Get Test Report History
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Build Test Report
+        uses: simple-elf/allure-report-action@master
         if: always()
         with:
-          name: Test-Reports-Screenshots
-          path: |
-            reports/
-            tests/screenshots/
+          gh_pages: gh-pages
+          allure_history: allure-history
+          allure_results: allure-results
+
+      - name: Publish Test Report To Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
