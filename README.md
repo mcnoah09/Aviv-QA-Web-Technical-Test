@@ -122,7 +122,8 @@ The focus is on implementing automation tests following the Page Object Model (P
 
 ### Test Reports
 
-- Test reports should be generated after each test run and can be found in the `/reports` directory.
+- Test reports should be generated after each test run and can be found in the `/allure-reports` directory.
+- To view test reports, run `allure serve allure-reports` in the terminal.
 
 ### Issues and Challenges
 

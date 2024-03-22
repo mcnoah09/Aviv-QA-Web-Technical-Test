@@ -32,13 +32,12 @@ jobs:
           sudo apt-get install -y google-chrome-stable
 
       - name: Run Tests and Generate Report
-        run: poetry run pytest -v --html=reports/test_report.html tests/
+        run: poetry run pytest -v
 
-      - name: Upload Test Report and Screenshots
+      - name: Upload Test Report
         uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: Test-Reports-Screenshots
+          name: Allure-Reports
           path: |
-            reports/
-            tests/screenshots/
+            allure-reports/

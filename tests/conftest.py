@@ -1,5 +1,4 @@
-from pathlib import Path
-
+import allure
 import pytest
 from faker import Faker
 from selenium import webdriver
@@ -67,34 +66,20 @@ def fake():
 def pytest_runtest_makereport(item, call):
     outcome = yield
     rep = outcome.get_result()
-    setattr(item, "rep_" + rep.when, rep)
 
+    # Check if the test has the "driver" fixture
+    if "driver" in item.fixturenames:
+        # Get the "driver" fixture
+        driver_fixture = item.funcargs["driver"]
 
-@pytest.fixture(autouse=True)
-def take_screenshot_on_failed_test(request, driver):
-    """
-    Take a screenshot on failed test
-
-    :param request: request object
-    :param driver: WebDriver instance
-
-    :return: None
-    """
-    root_dir = request.config.rootdir
-    screenshots_dir = Path(root_dir) / "tests" / "screenshots"
-
-    # Create the screenshots directory if it doesn't exist
-    screenshots_dir.mkdir(parents=True, exist_ok=True)
-
-    yield
-    # Check if the test or setup failed
-    test_failed = any((request.node.rep_setup.failed, request.node.rep_call.failed))
-    if test_failed:
-        file_name = f"{request.node.name}.png"
-        screenshot_path = screenshots_dir / file_name
-
-        # Save a screenshot
-        driver.save_screenshot(str(screenshot_path))
+        if rep.when == "call" and not rep.passed:
+            # Attach screenshot to the Allure report
+            screenshot_name = f"{item.name}_failure.png"
+            allure.attach(
+                driver_fixture.get_screenshot_as_png(),
+                name=screenshot_name,
+                attachment_type=allure.attachment_type.PNG,
+            )
 
 
 @pytest.fixture()
